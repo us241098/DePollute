@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+<title>{{ title }} - IoT</title>
+
+</head>
+
+
+<body>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a style ="font-size: 40px " class="navbar-brand" href="#">
+Pollution Monitoring Department </a>
+    </div>
+    </ul>
+  </div>
+</nav>
+
+<div class="container-fluid" "overlay">
+<canvas width=100% height=100% style="z-index:1" id="myCanvas"></canvas>
+<script type="text/javascript" src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+<div id="overlay">
+		    <form id="up">
+                <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/414360/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+
+                <div class="container-fluid"
+                    <a style ="font-size: 20px; margin:5px; ">Number of Cars being Monitored = 1 <a>
+                    <a style ="font-size: 15px; margin:10px; ">Latest Pollution Readings = {{user}}  <a>
+                </div>
+
+			<button type="submit" class="btn btn-default btn-danger"><a href="mailto:us241077@gmail.com?Subject=Pollution%20control">SendEmail</a></button>
+			<button type="submit" class="btn btn-default btn-info">Charge Fine</button>
+			<button type ="inverse" class="btn btn-inverse "><a href="hindi.srt">Download!</a></button>
+
+			</form>
+		</div>
+	</div>
+
+</body>
+</html>
